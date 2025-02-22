@@ -199,7 +199,7 @@ export default function PackagesForm({ packages }: Props) {
               </label>
             </div>
             <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || 'asd'}
               onChange={(token) => handleVerify(token)}
               className={cls.recaptcha}
             />
