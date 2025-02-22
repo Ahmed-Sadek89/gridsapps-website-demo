@@ -1,0 +1,40 @@
+.authentication_layout {
+  .swiper-pagination {
+    text-align: center;
+    .swiper-pagination-bullet {
+      background-color: rgba(#fff, 0.8);
+      width: 12px;
+      height: 12px;
+      transition: all 0.25s ease-in-out;
+
+      &.swiper-pagination-bullet-active {
+        width: 40px;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.web-shape-slider {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff;
+    background-color: rgba(var(--main-background-rgb), 1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    z-index: 100;
+
+    &:after {
+      font-size: 14px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -15px;
+  }
+}

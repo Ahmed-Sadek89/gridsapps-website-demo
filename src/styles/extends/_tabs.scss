@@ -1,0 +1,42 @@
+%tab_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+
+  span {
+    position: relative;
+    top: 2px;
+    color: rgba(var(--text-color-main-rgb), 0.5);
+    padding: 3px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    border-radius: 1px;
+    font-size: 14px;
+  }
+
+  &[data-state="active"] {
+    border: 1px solid rgba(var(--text-color-main-rgb), 1);
+    background-color: rgba(var(--text-color-main-rgb), 0.05);
+
+    span {
+      color: rgba(var(--text-color-main-rgb), 1);
+      top: 0;
+    }
+  }
+
+  img {
+    width: 26px;
+    height: 15px;
+    object-fit: contain;
+  }
+}
+
+%tab_content {
+  padding-top: 20px;
+  margin-top: 0;
+}

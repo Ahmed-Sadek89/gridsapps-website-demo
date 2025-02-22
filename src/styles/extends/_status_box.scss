@@ -1,0 +1,44 @@
+%statusBox {
+  background-color: rgba(#000, 0.1);
+  border: 1px solid rgba(#000, 0.1);
+  color: rgba(#000, 1);
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 5px 10px 3px;
+
+  &.success {
+    background-color: rgba(#00d172, 0.1);
+    border: 1px solid rgba(#00d172, 0.1);
+    color: rgba(#00ad5f, 1);
+  }
+
+  &.failure {
+    background-color: rgba(#d10000, 0.1);
+    border: 1px solid rgba(#d10000, 0.1);
+    color: rgba(#ad0000, 1);
+  }
+
+  &.pending {
+    background-color: rgba(#f2b24e, 0.1);
+    border: 1px solid rgba(#f2b24e, 0.1);
+    color: rgba(#f2b24e, 1);
+  }
+}
+
+%statusTitle {
+  color: rgba(#000, 1);
+  border-radius: 4px;
+  font-weight: bold;
+
+  &.success {
+    color: rgba(#00ad5f, 1);
+  }
+
+  &.failure {
+    color: rgba(#ad0000, 1);
+  }
+
+  &.pending {
+    color: rgba(#f2b24e, 1);
+  }
+}

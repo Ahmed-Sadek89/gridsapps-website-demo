@@ -1,0 +1,107 @@
+@import "@/styles/mixins";
+
+.header {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  @include md {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: clamp(25px, 4vw, 30px);
+  }
+
+  h2,
+  p {
+    max-width: 500px;
+  }
+}
+
+.video {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  .textSide {
+    width: calc(35%);
+
+    @include md {
+      width: 100%;
+    }
+
+    .box {
+      background: url("/imgs/services/background.png") no-repeat;
+      background-size: cover;
+      color: #fff;
+      padding: 50px;
+      border-radius: 30px;
+      max-width: 500px;
+
+      @include xs {
+        padding: 30px;
+      }
+
+      h3 {
+        font-size: clamp(25px, 4vw, 30px);
+      }
+
+      ul {
+        margin-top: 20px;
+
+        li {
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            background-color: var(--success-color);
+            color: #fff;
+            padding: 5px;
+            border-radius: 50%;
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
+  }
+
+  .videoSide {
+    width: calc(65% - 50px);
+    position: relative;
+
+    @include md {
+      width: 100%;
+    }
+
+    img {
+      border-radius: 30px;
+      width: 100%;
+      height: 380px;
+    }
+
+    svg {
+      position: absolute;
+      top: 80%;
+      right: -5%;
+      font-size: clamp(80px, 10vw, 150px);
+      color: var(--main-color);
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+
+      @include md {
+        right: -3%;
+      }
+    }
+  }
+}

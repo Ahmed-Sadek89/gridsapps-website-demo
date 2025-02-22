@@ -1,0 +1,17 @@
+.rdp-tbody {
+  button {
+    border: 0 !important;
+  }
+
+  td:has([aria-selected].bg-primary:not(.aria-selected\:bg-accent[aria-selected="true"])) {
+    button {
+      border-radius: 50%;
+    }
+  }
+
+  td:has(.aria-selected\:bg-accent[aria-selected="true"]) {
+    button {
+      border-radius: 0;
+    }
+  }
+}

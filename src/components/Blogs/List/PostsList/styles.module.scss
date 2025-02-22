@@ -1,0 +1,11 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.posts_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 80px;
+}

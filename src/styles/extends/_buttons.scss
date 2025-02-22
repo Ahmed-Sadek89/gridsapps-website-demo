@@ -1,0 +1,176 @@
+@import "../mixins";
+
+%mainBtn {
+  padding: 10px 30px;
+  display: block;
+  border-radius: 30px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    background-color: #fff;
+    color: var(--main-color);
+  }
+
+  @include sm {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
+
+  @include xs {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  svg {
+    margin-inline-end: 7px;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.mainBtn {
+  @extend %mainBtn;
+}
+
+%panelBtn {
+  text-align: center !important;
+  padding: 10px 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(var(--main-color-rgb), 0.1);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.35s ease;
+  margin-top: 20px;
+
+  &:hover {
+    border-color: var(--main-color);
+    background-color: var(--main-background);
+    color: #fff;
+  }
+
+  svg {
+    top: 3px;
+    margin-inline-end: 8px;
+  }
+
+  @include sm {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
+
+  @include xs {
+    font-size: 14px;
+  }
+}
+
+%panelFocusBtn {
+  text-align: center !important;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  border: 1px solid var(--text-color);
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 0;
+  transition: all 0.35s ease;
+
+  &:hover {
+    background-color: var(--text-color-dark);
+  }
+
+  svg {
+    top: 3px;
+    margin-inline-end: 8px;
+  }
+
+  @include sm {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
+
+  @include xs {
+    font-size: 14px;
+  }
+}
+
+%outlinedBtn {
+  border: 1px solid rgba(var(--text-color-main-rgb), 0.4);
+  color: var(--text-color-main);
+  border-radius: 8px;
+  padding: 5px 20px;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    border-color: var(--main-color);
+  }
+  @include sm {
+    padding: 8px 25px;
+  }
+  @include xs {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+}
+
+%outlinedFocusBtn {
+  text-align: center !important;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  transition: all 0.3s ease;
+  outline: none;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--text-color);
+    border-color: var(--text-color);
+    color: #fff;
+  }
+  @include sm {
+    padding: 8px 25px;
+  }
+  @include sm {
+    padding: 6px 20px;
+    font-size: 1rem;
+  }
+}
+
+%flatBtn {
+  background-color: var(--secondary-background);
+  padding: 10px 20px;
+  color: var(--text-color-main);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+
+  @include sm {
+    padding: 8px 25px;
+  }
+
+  @include xs {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+}

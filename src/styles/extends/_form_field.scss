@@ -1,0 +1,239 @@
+@import "../mixins";
+@import "./buttons";
+
+%form_field {
+  &.switch_field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &.half_width,
+    &.third_width,
+    &.fourth_width {
+      display: inline-flex;
+    }
+
+    &.fit_width {
+      display: inline-flex;
+      width: fit-content;
+      margin-inline-end: 20px;
+
+      @include xs {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+    }
+
+    &.full_width {
+      width: calc(100% - 20px);
+      margin-inline-end: 20px;
+      margin-bottom: 20px;
+
+      @include lg {
+        width: 100%;
+        margin-inline-end: 0;
+      }
+
+      label {
+        top: 0;
+      }
+    }
+
+    .switch {
+      padding: 0;
+    }
+
+    label {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  &.three_quarters_width {
+    width: calc(75% - 20px);
+    display: inline-block;
+    margin-inline-end: 20px;
+
+    @include lg {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.two_thirds_width {
+    width: calc(66.667% - 20px);
+    display: inline-block;
+    margin-inline-end: 20px;
+
+    @include lg {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.full_width {
+    width: calc(100% - 20px);
+    margin-inline-end: 20px;
+    margin-bottom: 20px;
+
+    @include lg {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.half_width {
+    width: calc(50% - 20px);
+    display: inline-block;
+    margin-inline-end: 20px;
+
+    @include lg {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.third_width {
+    width: calc(33.33% - 20px);
+    display: inline-block;
+    margin-inline-end: 20px;
+
+    @include lg {
+      width: calc(50% - 20px);
+      margin-inline-end: 20px;
+    }
+
+    @include md {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.fourth_width {
+    width: calc(25% - 20px);
+    display: inline-block;
+    margin-inline-end: 20px;
+
+    @include lg {
+      width: calc(50% - 20px);
+    }
+
+    @include md {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.fifthRow {
+    width: calc(20% - 20px);
+    display: inline-block;
+    margin-inline-end: 20px;
+
+    @include xl {
+      width: calc(33.33% - 20px);
+    }
+
+    @include lg {
+      width: calc(50% - 20px);
+    }
+
+    @include md {
+      width: 100%;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.selectBox {
+    margin-top: 35px;
+  }
+
+  .sub_title {
+    display: block;
+    font-size: 13px;
+    margin-top: 0;
+    position: relative;
+    top: -5px;
+    padding-inline-start: 5px;
+  }
+
+  .inputs_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    label {
+      cursor: pointer;
+    }
+
+    .checkbox_input,
+    .radiobox_input {
+      background-color: rgba(var(--main-background-rgb), 0.05);
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+  }
+
+  button.form_btn {
+    @extend %mainBtn;
+  }
+}
+
+%form_label {
+  padding-inline-start: 5px;
+  color: var(--text-color-main);
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+%color_picker_input {
+  label {
+    span.color {
+      display: inline-block;
+      width: 50px;
+      height: 15px;
+      border-radius: 3px;
+      margin-inline-start: 10px;
+      position: relative;
+      top: 4px;
+      border: 1px solid rgba(var(--main-background-rgb), 0.5);
+    }
+  }
+
+  .color_picker {
+    visibility: hidden;
+  }
+
+  .color {
+    cursor: pointer;
+    width: 100%;
+    height: 16px;
+    border-radius: 4px;
+    background-color: rgba(var(--main-background-rgb), 0.1);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 8px;
+      border-radius: 8px;
+      background: linear-gradient(
+        90deg,
+        #ff0000 5.21%,
+        #ff8a00 16.48%,
+        #ffe600 27.74%,
+        #14ff00 39.35%,
+        #00a3ff 49.37%,
+        #0500ff 61.18%,
+        #ad00ff 72.26%,
+        #ff00c7 83.53%,
+        #ff0000 94.61%
+      );
+    }
+  }
+}

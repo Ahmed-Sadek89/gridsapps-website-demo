@@ -1,0 +1,402 @@
+@import "./extends.scss";
+@import "./mixins.scss";
+@import "./variables.scss";
+//==> Global UIs
+@import "./UIs/select-box";
+@import "./UIs/radio-box";
+@import "./UIs/tooltip";
+@import "./UIs/ck-editor-reset";
+@import "./UIs/iconify-reset";
+@import "./UIs/lightgallery-reset";
+@import "./UIs/loading-button";
+@import "./UIs/modal-video-reset";
+@import "./UIs/progressbar-reset";
+@import "./UIs/sweetalert-reset";
+@import "./UIs/toastify-reset";
+@import "./UIs/calender_reset";
+@import "./UIs/swiper_resets";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+
+/***************  { Import & Set Fonts }   *****************/
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoKufiArabic";
+  src: url("/fonts/NotoKufiArabic.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/fonts/PlusJakartaSans.ttf");
+  font-display: swap;
+}
+
+/***************  { General Styles For Elements }   *****************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+html,
+body {
+  color: var(--text-color);
+  background-color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding-top: 80px;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+[lang="ar"] {
+  * {
+    --font-sans: "NotoKufiArabic";
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+[lang="en"] {
+  * {
+    --font-sans: "Inter";
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  outline: none;
+  padding: 8px 12px;
+
+  &:focus {
+    border-color: var(--main-color);
+  }
+}
+
+button {
+  font: inherit;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  outline: none;
+  padding: 8px 12px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/********************************************************************************/
+/********************* Adjusting Font Sizes For All Screens *********************/
+h1 {
+  --base-font-size: 46px;
+  font-size: var(--base-font-size);
+
+  @include xl {
+    font-size: calc(94 / 100 * var(--base-font-size));
+  }
+
+  @include lg {
+    font-size: calc(85 / 100 * var(--base-font-size));
+  }
+
+  @include md {
+    font-size: calc(77 / 100 * var(--base-font-size));
+  }
+
+  @include sm {
+    font-size: calc(73 / 100 * var(--base-font-size));
+  }
+
+  @include xs {
+    font-size: calc(70 / 100 * var(--base-font-size));
+    text-align: center;
+  }
+}
+
+h2 {
+  --base-font-size: 38px;
+  font-size: var(--base-font-size);
+
+  @include xl {
+    font-size: calc(94 / 100 * var(--base-font-size));
+  }
+
+  @include lg {
+    font-size: calc(85 / 100 * var(--base-font-size));
+  }
+
+  @include md {
+    font-size: calc(77 / 100 * var(--base-font-size));
+  }
+
+  @include sm {
+    font-size: calc(73 / 100 * var(--base-font-size));
+  }
+
+  @include xs {
+    font-size: calc(70 / 100 * var(--base-font-size));
+    text-align: center;
+  }
+}
+
+h3 {
+  --base-font-size: 30px;
+  font-size: var(--base-font-size);
+
+  @include xl {
+    font-size: calc(94 / 100 * var(--base-font-size));
+  }
+
+  @include lg {
+    font-size: calc(85 / 100 * var(--base-font-size));
+  }
+
+  @include md {
+    font-size: calc(77 / 100 * var(--base-font-size));
+  }
+
+  @include sm {
+    font-size: calc(73 / 100 * var(--base-font-size));
+  }
+
+  @include xs {
+    font-size: calc(70 / 100 * var(--base-font-size));
+    text-align: center;
+  }
+}
+
+h4 {
+  --base-font-size: 26px;
+  font-size: var(--base-font-size);
+
+  @include xl {
+    font-size: calc(94 / 100 * var(--base-font-size));
+  }
+
+  @include lg {
+    font-size: calc(85 / 100 * var(--base-font-size));
+  }
+
+  @include md {
+    font-size: calc(77 / 100 * var(--base-font-size));
+  }
+
+  @include sm {
+    font-size: calc(73 / 100 * var(--base-font-size));
+  }
+
+  @include xs {
+    font-size: calc(70 / 100 * var(--base-font-size));
+    text-align: center;
+  }
+}
+
+h5 {
+  --base-font-size: 23px;
+  font-size: var(--base-font-size);
+
+  @include xl {
+    font-size: calc(94 / 100 * var(--base-font-size));
+  }
+
+  @include lg {
+    font-size: calc(85 / 100 * var(--base-font-size));
+  }
+
+  @include md {
+    font-size: calc(77 / 100 * var(--base-font-size));
+  }
+
+  @include sm {
+    font-size: calc(73 / 100 * var(--base-font-size));
+  }
+
+  @include xs {
+    font-size: calc(70 / 100 * var(--base-font-size));
+    text-align: center;
+  }
+}
+
+h6 {
+  --base-font-size: 20px;
+  font-size: var(--base-font-size);
+
+  @include xl {
+    font-size: calc(94 / 100 * var(--base-font-size));
+  }
+
+  @include lg {
+    font-size: calc(85 / 100 * var(--base-font-size));
+  }
+
+  @include md {
+    font-size: calc(77 / 100 * var(--base-font-size));
+  }
+
+  @include sm {
+    font-size: calc(73 / 100 * var(--base-font-size));
+  }
+
+  @include xs {
+    font-size: calc(70 / 100 * var(--base-font-size));
+    text-align: center;
+  }
+}
+
+p {
+  --base-font-size: 16px;
+  line-height: 25px;
+  font-size: var(--base-font-size);
+  color: var(--pale-text-color);
+
+  @include xl {
+    font-size: 16px;
+  }
+
+  @include lg {
+    font-size: 15px;
+  }
+
+  @include md {
+    font-size: 15px;
+  }
+
+  @include sm {
+    font-size: 15px;
+  }
+
+  @include xs {
+    font-size: 14px;
+  }
+}
+
+span {
+  --base-font-size: 15px;
+  font-size: var(--base-font-size, 15px);
+  color: var(--pale-text-color);
+
+  @include xl {
+    font-size: 15px;
+  }
+
+  @include lg {
+    font-size: 15px;
+  }
+
+  @include md {
+    font-size: 14px;
+  }
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include xs {
+    font-size: 13px;
+  }
+}
+
+/*****************************************\ Selection Reset \**************************************/
+
+::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background-color: rgb(179, 188, 204);
+}
+
+.container {
+  max-width: 1620px;
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @include xxl {
+    max-width: 1320px;
+  }
+
+  @include xl {
+    max-width: 1140px;
+  }
+
+  @include lg {
+    max-width: 960px;
+  }
+
+  @include md {
+    max-width: 100%;
+  }
+}

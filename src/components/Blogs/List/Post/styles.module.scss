@@ -1,0 +1,165 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.blog {
+  background-color: #fff;
+  box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
+  padding: 50px;
+  border-radius: 20px;
+  width: calc(33.33% - 20px);
+  --color: #45a7de;
+
+  @include xl {
+    padding: 30px;
+  }
+
+  @include lg {
+    width: calc(50% - 15px);
+  }
+
+  @include sm {
+    width: 100%;
+  }
+
+  &:nth-of-type(even) {
+    --color: #ea5f38;
+  }
+
+  &:nth-of-type(odd) {
+    --color: #45a7de;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .color {
+      width: 20px;
+      height: 20px;
+      background-color: var(--color);
+      border-radius: 50%;
+    }
+
+    .date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      font-family: "PlusJakartaSans";
+
+      svg {
+        color: var(--color);
+      }
+    }
+  }
+
+  .content {
+    margin-bottom: 10px;
+
+    &.rtl {
+      h3,
+      p {
+        font-family: var(--font-sans);
+      }
+    }
+
+    h3 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      font-family: "PlusJakartaSans";
+
+      @include md {
+        font-size: 24px;
+      }
+
+      @include xs {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .content_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "PlusJakartaSans";
+      gap: 25px;
+
+      @include md {
+        flex-wrap: wrap;
+      }
+
+      & > p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--pale-text-color);
+        margin-bottom: 5px;
+        max-width: 55%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        -webkit-box-orient: vertical;
+
+        * {
+          font-weight: normal;
+          font-size: 15px;
+        }
+
+        @include xl {
+          max-width: 60%;
+        }
+
+        @include lg {
+          max-width: 65%;
+        }
+
+        @include md {
+          max-width: 85%;
+        }
+
+        @include sm {
+          font-size: 14px;
+          max-width: 100%;
+        }
+      }
+
+      button {
+        width: 100px;
+        height: 55px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        background-color: var(--main-color);
+        color: #fff;
+        font-size: 26px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid var(--main-color);
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          background-color: #fff;
+          color: var(--main-color);
+        }
+
+        @include lg {
+          width: 130px;
+          height: 50px;
+        }
+
+        @include sm {
+          width: 100px;
+          height: 45px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

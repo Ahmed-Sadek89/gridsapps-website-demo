@@ -1,0 +1,81 @@
+@import "@/styles/mixins";
+
+.statistics {
+  padding: 130px 30px;
+  margin: 100px 0;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15%;
+  position: relative;
+
+  @include sm {
+    gap: 50px;
+  }
+
+  .bellImage {
+    position: absolute;
+    width: 112px;
+    height: 112px;
+    transform: rotate(20deg);
+    object-fit: contain;
+    top: -60px;
+    right: 10%;
+
+    @include sm {
+      width: 80px;
+    }
+  }
+
+  .rightDashed {
+    position: absolute;
+    width: 270px;
+    height: 110px;
+    object-fit: fill;
+    top: -60px;
+    right: 8%;
+    transform: rotate(0deg);
+
+    @include sm {
+      width: 150px;
+    }
+  }
+
+  .leftDashed {
+    position: absolute;
+    width: 270px;
+    height: 110px;
+    transform: rotate(150deg);
+    object-fit: contain;
+    top: -60px;
+    left: 10%;
+
+    @include sm {
+      width: 150px;
+    }
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+
+    span {
+      font-size: clamp(40px, 4vw, 65px);
+      font-weight: 700;
+    }
+
+    span,
+    p {
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

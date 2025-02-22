@@ -1,0 +1,90 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.testimonials {
+  padding: 100px 0;
+  background-color: var(--background-alt-color);
+
+  &.white {
+    background-color: #fff;
+  }
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  .meta {
+    h2 {
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 50px;
+      text-align: center;
+
+      @include sm {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .testimonials_swiper {
+    position: relative;
+    top: -50px;
+
+    .testimonial {
+      .image {
+        width: 128px;
+        height: 128px;
+        border: 3px solid #eee;
+        border-radius: 50%;
+        margin: auto;
+        margin-bottom: 10px;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+          object-fit: contain;
+        }
+      }
+
+      .content {
+        p {
+          font-size: 17px;
+          line-height: 30px;
+          color: var(--pale-text-color);
+          text-align: center;
+          margin: auto;
+          max-width: 75%;
+          margin-bottom: 25px;
+
+          @include sm {
+            font-size: 15px;
+            max-width: 95%;
+          }
+        }
+      }
+
+      .user {
+        h4 {
+          font-size: 20px;
+          margin-bottom: 0;
+          text-align: center;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--pale-text-color);
+          text-align: center;
+
+          @include sm {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

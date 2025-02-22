@@ -1,0 +1,64 @@
+@import "./form_field";
+@import "./tabs";
+
+%box {
+  background-color: var(--secondary-background);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+%panelBox {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(var(--main-background-rgb), 0.1);
+  background-color: var(--secondary-background);
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .loading_data {
+    background-color: rgba(var(--main-background-rgb), 0.1);
+    padding: 15px 20px;
+    color: rgba(var(--main-background-rgb), 1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    @extend %form_label;
+  }
+
+  .field {
+    @extend %form_field;
+  }
+
+  /**********************
+  Tabs Styles if exists
+  **********************/
+  .tabs_button {
+    @extend %tab_button;
+  }
+
+  .tab_content {
+    @extend %tab_content;
+
+    .field {
+      margin-bottom: 15px;
+
+      label {
+        padding-inline-start: 5px;
+        color: var(--text-color-main);
+        display: inline-block;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}

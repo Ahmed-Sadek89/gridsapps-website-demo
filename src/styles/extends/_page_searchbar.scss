@@ -1,0 +1,146 @@
+@import "@/styles/mixins";
+
+%page_searchbar_default {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @include sm {
+    flex-wrap: wrap;
+  }
+
+  .input {
+    background: transparent;
+    border: 1px solid rgba(var(--text-color-main-rgb), 0.5);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+
+    @include sm {
+      margin-bottom: 10px;
+    }
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 310px;
+      padding: 10px 15px;
+      font-size: 15px;
+      color: var(--text-color-main);
+
+      @include sm {
+        padding: 7px 13px;
+      }
+    }
+
+    svg {
+      width: 40px;
+      height: 24px;
+      color: rgba(var(--text-color-main-rgb), 0.5);
+      cursor: pointer;
+    }
+  }
+
+  .date_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .date {
+      position: relative;
+
+      @include lg {
+        margin-top: 20px;
+      }
+
+      @include sm {
+        margin-top: 5px;
+      }
+    }
+
+    input {
+      padding-block: 7px;
+    }
+
+    label {
+      position: absolute;
+      top: -22px;
+      left: 5px;
+      color: var(--text-color-main);
+
+      @include sm {
+        font-size: 15px;
+        top: -18px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px 8px;
+      background-color: rgba(var(--main-background-rgb), 0.1);
+      border: 1px solid rgba(var(--main-background-rgb), 0.05);
+      font-weight: 500;
+      text-transform: capitalize;
+      color: var(--text-color-main);
+      border-radius: 4px;
+      font-size: 15px;
+      transition: all 0.2s ease-in-out;
+
+      @include xs {
+        padding: 7px 15px 5px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: rgba(var(--main-background-rgb), 0.3);
+      }
+
+      svg {
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}
+
+%page_searchbar_light {
+  @extend %page_searchbar_default;
+
+  .buttons {
+    button {
+      background-color: rgba(var(--main-background-rgb), 0.1);
+
+      &:hover {
+        background-color: rgba(var(--main-background-rgb), 0.3);
+      }
+    }
+  }
+}
+
+%page_searchbar_dark {
+  @extend %page_searchbar_default;
+
+  .buttons {
+    button {
+      background-color: rgba(var(--main-background-rgb), 0.3);
+
+      &:hover {
+        background-color: rgba(var(--main-background-rgb), 0.1);
+      }
+    }
+  }
+}

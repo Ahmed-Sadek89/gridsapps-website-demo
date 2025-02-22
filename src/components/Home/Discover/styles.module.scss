@@ -1,0 +1,195 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.discover {
+  padding: 100px 0;
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include lg {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .meta {
+      width: calc(30% - 40px);
+
+      @include lg {
+        width: 100%;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        text-transform: capitalize;
+
+        @include xl {
+          font-size: 28px;
+        }
+
+        @include lg {
+          text-align: center;
+        }
+
+        @include sm {
+          text-align: center;
+        }
+      }
+
+      p {
+        margin-bottom: 25px;
+
+        @include lg {
+          text-align: center;
+        }
+
+        @include sm {
+          text-align: center;
+        }
+      }
+
+      button {
+        width: 180px;
+        height: 50px;
+        margin: 10px 0;
+        display: block;
+        border-radius: 30px;
+        background-color: #fff;
+        color: var(--main-color);
+        font-size: 18px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid var(--main-color);
+        position: relative;
+        z-index: 1;
+
+        a {
+          color: inherit;
+        }
+
+        &:hover {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+
+        @include lg {
+          width: 150px;
+          height: 45px;
+          margin: 10px auto;
+        }
+
+        @include sm {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .solutions {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 70px;
+      width: calc(70% - 40px);
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 50px;
+      box-shadow: 0px 4px 17px 0px rgba(7, 113, 222, 0.15);
+
+      @include xl {
+        padding: 40px;
+        column-gap: 10px;
+      }
+
+      @include lg {
+        width: 100%;
+      }
+
+      @include md {
+        padding: 40px;
+      }
+
+      .solution {
+        width: calc(50% - 25px);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @include sm {
+          width: 100%;
+        }
+
+        &:nth-of-type(2) {
+          .icon {
+            --color: #f1e8ff;
+          }
+        }
+
+        &:nth-of-type(3) {
+          .icon {
+            --color: #fff2f2;
+          }
+        }
+
+        &:nth-of-type(4) {
+          .icon {
+            --color: #ffe7fb;
+          }
+        }
+
+        .icon {
+          --color: #e2f3ff;
+          width: 75px;
+          height: 75px;
+          border-radius: 20px;
+          background-color: var(--color);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 32px;
+          padding: 20px;
+
+          @include md {
+            width: 64px;
+            height: 64px;
+            font-size: 28px;
+          }
+
+          @include xs {
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+          }
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 24px;
+          color: var(--text-color);
+
+          @include xl {
+            font-size: 20px;
+          }
+
+          @include md {
+            font-size: 20px;
+          }
+
+          @include xs {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

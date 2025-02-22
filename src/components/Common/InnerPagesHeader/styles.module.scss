@@ -1,0 +1,49 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--main-color);
+  position: relative;
+  top: -80px;
+
+  @media screen and (max-width: 1920px) {
+    height: 56vh;
+  }
+
+  .icon {
+    text-align: center;
+    img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      margin: auto;
+
+      @media screen and (max-width: 1920px) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .content {
+    h1,
+    p {
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: auto;
+      max-width: 60%;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@import "@/styles/mixins";
+
+.aboutGallery {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 180px;
+
+  @include md {
+    margin-top: 50px;
+  }
+
+  @include xs {
+    margin-top: 50px;
+  }
+
+  .topSide {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+
+    @include sm {
+      flex-direction: column;
+    }
+
+    .images {
+      display: flex;
+      align-items: flex-end;
+      gap: 30px;
+      width: 100%;
+
+      @include md {
+        display: none;
+      }
+
+      @include xs {
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .img1,
+      .img2 {
+        border-radius: 20px;
+        overflow: hidden;
+        width: 100%;
+
+        img {
+          border-radius: 20px;
+          width: 100%;
+          max-height: 350px;
+        }
+      }
+
+      .img1 {
+        height: 260px;
+
+        @include xs {
+          height: auto;
+        }
+      }
+
+      .img2 {
+        height: 350px;
+
+        @include xs {
+          height: auto;
+        }
+      }
+    }
+
+    .details {
+      width: 100%;
+
+      span {
+        color: var(--main-color);
+        font-size: clamp(20px, 3vw, 25px);
+      }
+
+      h2 {
+        font-size: clamp(20px, 3vw, 30px);
+        font-weight: 600;
+        margin-bottom: 50px;
+        line-height: 51px;
+
+        @include xs {
+          line-height: 35px;
+        }
+      }
+
+      p {
+        font-size: clamp(14px, 3vw, 18px);
+        opacity: 0.8;
+        line-height: 31px;
+        max-width: 90%;
+
+        @include xs {
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  .bottomSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+
+    @include xs {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .img {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        border-radius: 20px;
+        width: 90%;
+        max-height: 350px;
+
+        @include xs {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

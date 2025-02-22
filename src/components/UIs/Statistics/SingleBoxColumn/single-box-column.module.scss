@@ -1,0 +1,206 @@
+@import "@/styles/mixins.scss";
+
+.box_column {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  width: 100%;
+  transition: all 0.2s ease;
+  position: relative;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    height: calc(100% - 55px);
+
+    @include sm {
+      height: calc(100% - 38px);
+      padding: 35px 20px;
+    }
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      min-width: 90px;
+      min-height: 90px;
+      padding: 5px;
+      background-image: linear-gradient(to bottom left, var(--bg-main), #fff);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+
+      svg {
+        width: 54px;
+        height: 54px;
+        color: var(--text-color);
+
+        @include sm {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      @include sm {
+        width: 75px;
+        height: 75px;
+        min-width: 75px;
+        min-height: 75px;
+        margin-bottom: 5px;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      line-height: 30px;
+      font-size: 30px;
+      color: var(--text-color);
+
+      @include sm {
+        line-height: 24px;
+        font-size: 24px;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: var(--text-color);
+
+      @include sm {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .bottomValue {
+    height: 50px;
+    width: calc(100% + 2px);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: -48px;
+    left: -1px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+
+    &:hover {
+      background-color: var(--bg-main);
+    }
+
+    @include sm {
+      padding: 7px;
+    }
+  }
+
+  &.noBottom {
+    .top {
+      height: 100%;
+
+      .icon {
+        width: 75px;
+        height: 75px;
+        min-width: 75px;
+        min-height: 75px;
+        padding: 5px;
+        background-image: linear-gradient(to bottom left, var(--bg-main), #fff);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        svg {
+          width: 48px;
+          height: 48px;
+          color: var(--text-color);
+
+          @include sm {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        @include sm {
+          width: 68px;
+          height: 68px;
+          min-width: 68px;
+          min-height: 68px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &.smallBox {
+    .top {
+      padding: 15px;
+
+      @include sm {
+        padding: 10px;
+      }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+
+        svg {
+          width: 44px;
+          height: 44px;
+
+          @include sm {
+            width: 38px;
+            height: 38px;
+          }
+        }
+
+        @include sm {
+          width: 64px;
+          height: 64px;
+          min-width: 64px;
+          min-height: 64px;
+        }
+      }
+
+      h2 {
+        line-height: 24px;
+        font-size: 24px;
+        font-weight: bold;
+
+        @include sm {
+          line-height: 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  a {
+    width: 100%;
+    padding: 15px;
+    display: block;
+    text-align: center !important;
+    position: absolute;
+    bottom: 0;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: #eee;
+
+    &:hover {
+      background-color: var(--bg-main);
+    }
+
+    @include sm {
+      padding: 7px;
+    }
+  }
+}

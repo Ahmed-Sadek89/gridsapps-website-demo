@@ -1,0 +1,123 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.team {
+  padding: 50px 0 100px;
+
+  @include xs {
+    padding: 40px 0 80px;
+  }
+
+  .meta {
+    h2 {
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 80px;
+      text-align: center;
+
+      @include sm {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .team_swiper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    .member {
+      width: calc(25% - 40px);
+
+      @include xl {
+        width: calc(33.33% - 40px);
+      }
+
+      @include lg {
+        width: calc(50% - 20px);
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
+      .image {
+        margin-bottom: 15px;
+        border-radius: 25px;
+        overflow: hidden;
+        height: 380px;
+        position: relative;
+
+        @include sm {
+          height: 300px;
+          width: 260px;
+          margin: auto;
+          margin-bottom: 10px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(var(--main-color-rgb), 0.05));
+          z-index: 10;
+        }
+
+        @include sm {
+          height: 280px;
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        margin-bottom: 10px;
+
+        h3 {
+          font-size: 24px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 22px;
+          color: var(--pale-text-color);
+          margin-bottom: 5px;
+          text-align: center;
+
+          @include sm {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}

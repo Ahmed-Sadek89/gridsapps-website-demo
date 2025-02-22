@@ -1,0 +1,11 @@
+@import "@/styles/mixins";
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-bottom: 144px;
+}

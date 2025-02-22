@@ -1,0 +1,15 @@
+@import "@/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+
+  &>div {
+    width: 100%;
+  }
+
+  @include xs {
+    gap: 80px;
+  }
+}

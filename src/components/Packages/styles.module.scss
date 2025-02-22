@@ -1,0 +1,33 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.wrapper {
+  padding: 0;
+
+  .meta {
+    h2 {
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 auto 10px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 55%;
+      margin: 0 auto 50px;
+
+      @include lg {
+        max-width: 65%;
+      }
+
+      @include md {
+        max-width: 75%;
+      }
+
+      @include sm {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

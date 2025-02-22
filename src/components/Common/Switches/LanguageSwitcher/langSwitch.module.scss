@@ -1,0 +1,63 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.headerDropdown {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 0;
+  z-index: 101;
+
+  .langSwitcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: fill;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text-color);
+    }
+  }
+
+  .head {
+    border-bottom: 1px dashed #eee;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+    p {
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  .langs {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 10px 20px;
+      background-color: var(--hover-color);
+      font-size: 14px;
+
+      &:hover {
+        background-color: rgba(var(--main-color-rgb), 0.05);
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        object-fit: fill;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "@/styles/mixins";
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 80%;
+  margin-bottom: 100px;
+
+  @include sm {
+    max-width: 100%;
+  }
+
+  span {
+    color: var(--main-color);
+    font-size: clamp(20px, 4vw, 25px);
+  }
+
+  h2 {
+    font-size: clamp(25px, 4vw, 30px);
+    line-height: 48px;
+
+    @include xs {
+      line-height: 40px;
+    }
+  }
+
+  p {
+    font-size: clamp(17px, 4vw, 20px);
+    line-height: 40px;
+    font-weight: 400;
+
+    @include xs {
+      line-height: 30px;
+    }
+  }
+}

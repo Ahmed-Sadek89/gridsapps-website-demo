@@ -1,0 +1,208 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.blogs {
+  padding: 100px 0;
+  background-color: var(--background-alt-color);
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  .meta {
+    h2 {
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 80px;
+      text-align: center;
+
+      @include sm {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .blog_swiper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    height: 100%;
+
+    @include xl {
+      flex-wrap: wrap;
+    }
+
+    @include lg {
+      gap: 30px;
+    }
+
+    .blog {
+      background-color: #fff;
+      box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.05);
+      padding: 50px;
+      border-radius: 20px;
+      width: calc(33.33% - 40px);
+      --color: #45a7de;
+
+      @include xl {
+        padding: 30px;
+      }
+
+      @include lg {
+        width: calc(50% - 25px);
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        --color: #ea5f38;
+      }
+
+      &:nth-of-type(3) {
+        --color: #6a26f1;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .color {
+          width: 20px;
+          height: 20px;
+          background-color: var(--color);
+          border-radius: 50%;
+        }
+
+        .date {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          font-family: "PlusJakartaSans";
+
+          svg {
+            color: var(--color);
+          }
+        }
+      }
+
+      .content {
+        margin-bottom: 10px;
+
+        &.rtl {
+          h3,
+          p,
+          span {
+            font-family: var(--font-sans);
+          }
+        }
+
+        h3 {
+          font-size: 28px;
+          margin-bottom: 30px;
+          font-family: "PlusJakartaSans";
+
+          @include xl {
+            font-size: 20px;
+          }
+
+          @include xs {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .content_wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: "PlusJakartaSans";
+          gap: 25px;
+
+          @include md {
+            flex-wrap: wrap;
+          }
+
+          * {
+            font-size: 16px !important;
+            font-weight: normal;
+            font-family: unset !important;
+          }
+
+          &>p {
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--pale-text-color);
+            margin-bottom: 5px;
+            max-width: 55%;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            line-clamp: 6;
+            -webkit-box-orient: vertical;
+
+            @include xl {
+              max-width: 85%;
+            }
+
+            @include lg {
+              max-width: 65%;
+            }
+
+            @include md {
+              max-width: 85%;
+            }
+
+            @include sm {
+              font-size: 14px;
+              max-width: 100%;
+            }
+          }
+
+          button {
+            width: 100px;
+            height: 55px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background-color: var(--main-color);
+            color: #fff;
+            font-size: 26px;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid var(--main-color);
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+              background-color: #fff;
+              color: var(--main-color);
+            }
+
+            @include xl {
+              width: 80px;
+              height: 50px;
+            }
+
+            @include sm {
+              width: 100px;
+              height: 45px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

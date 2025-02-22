@@ -1,0 +1,95 @@
+@import "@/styles/extends";
+@import "@/styles/mixins";
+
+.filters {
+  .search {
+    @extend %form_field;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 15px;
+
+    @include md {
+      width: 80%;
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    input {
+      border: 1px solid #ccc;
+
+      &:focus {
+        border-color: #ccc;
+        outline-color: #ccc;
+      }
+    }
+  }
+
+  .filters {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include md {
+      padding: 0;
+      gap: 20px;
+    }
+
+    @include xs {
+      gap: 15px;
+    }
+
+    .filter {
+      &.active {
+        button {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+      }
+
+      button {
+        width: 230px;
+        height: 55px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 30px;
+        font-size: 15px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        cursor: pointer;
+        background-color: #fff;
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+
+        @include lg {
+          width: 180px;
+          height: 50px;
+        }
+
+        @include sm {
+          width: 220px;
+          height: 45px;
+          font-size: 15px;
+          margin: 0;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

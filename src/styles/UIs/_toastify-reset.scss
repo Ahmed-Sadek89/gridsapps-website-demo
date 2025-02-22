@@ -1,0 +1,29 @@
+.Toastify__toast-container {
+  z-index: 2002;
+}
+
+li[data-type="error"] {
+  background-color: var(--danger-color) !important;
+  border-color: rgba(#000, 0.2) !important;
+}
+
+li[data-type="success"] {
+  background-color: var(--success-color) !important;
+  border-color: rgba(#000, 0.2) !important;
+}
+
+li[data-type="info"] {
+  background-color: var(--info-color) !important;
+  border-color: rgba(#000, 0.1) !important;
+}
+
+li[data-type="loading"] {
+  background-color: var(--loading-color) !important;
+  border-color: rgba(#000, 0.1) !important;
+
+  .sonner-spinner {
+    * {
+      background-color: #fff;
+    }
+  }
+}

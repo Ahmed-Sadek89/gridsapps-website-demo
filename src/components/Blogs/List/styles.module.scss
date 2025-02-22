@@ -1,0 +1,237 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.blogs_list {
+  padding: 0;
+
+  .search {
+    @extend %form_field;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 15px;
+
+    @include md {
+      width: 80%;
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    input {
+      border: 1px solid #ccc;
+
+      &:focus {
+        border-color: #ccc;
+        outline-color: #ccc;
+      }
+    }
+  }
+
+  .filters {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include md {
+      padding: 0;
+      gap: 20px;
+    }
+
+    @include xs {
+      gap: 15px;
+    }
+
+    .filter {
+      &.active {
+        button {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+      }
+
+      button {
+        width: 230px;
+        height: 55px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 30px;
+        font-size: 15px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgba(var(--main-color-rgb), 0.08);
+        color: var(--pale-text-color);
+        border: 1px solid transparent;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+
+        @include lg {
+          width: 180px;
+          height: 50px;
+        }
+
+        @include sm {
+          width: 220px;
+          height: 45px;
+          font-size: 15px;
+          margin: 0;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .main_post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0 25px;
+    margin-bottom: 100px;
+    max-width: 80%;
+    margin-inline: auto;
+
+    @include lg {
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+
+    @include md {
+      gap: 30px;
+    }
+
+    .image {
+      width: 50%;
+      border-radius: 12px;
+      overflow: hidden;
+
+      @include lg {
+        width: 100%;
+
+        img {
+          max-height: 450px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .content {
+      width: 50%;
+      font-family: "PlusJakartaSans";
+
+      &.rtl {
+        h3,
+        p {
+          font-family: var(--font-sans);
+        }
+      }
+
+      @include lg {
+        width: 100%;
+      }
+
+      h3 {
+        margin-bottom: 25px;
+
+        @include md {
+          margin-bottom: 15px;
+        }
+      }
+
+      .text {
+        max-width: 80%;
+        line-height: 40px;
+        color: var(--text-color);
+
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--pale-text-color);
+        margin-bottom: 30px;
+        max-width: 55%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        -webkit-box-orient: vertical;
+
+        * {
+          font-weight: normal;
+          font-size: 15px;
+        }
+
+        @include lg {
+          max-width: 100%;
+        }
+
+        @include md {
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .author {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: rgba(var(--main-color-rgb), 0.1);
+            padding: 10px;
+
+            img {
+              object-position: left;
+            }
+          }
+
+          .info {
+            p {
+              color: var(--text-color);
+              text-transform: capitalize;
+              font-weight: bold;
+
+              &:last-of-type {
+                font-weight: normal;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        button {
+          background-color: transparent;
+          border: 0;
+          padding: 0;
+          color: var(--main-color);
+          cursor: pointer;
+          font-size: 15px;
+
+          a {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}

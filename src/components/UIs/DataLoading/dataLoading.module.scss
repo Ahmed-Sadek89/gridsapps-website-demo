@@ -1,0 +1,10 @@
+.loading_data {
+  background-color: rgba(var(--main-background-rgb), 0.1);
+  padding: 15px 20px;
+  color: rgba(var(--main-background-rgb), 1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,151 @@
+@import "@/styles/mixins";
+
+.details {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E6F1FC 100%);
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    .textSide {
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        line-height: 35px;
+
+        @include sm {
+          line-height: 30px;
+        }
+      }
+    }
+
+    .textSide,
+    .imagesSide {
+      flex: 1;
+    }
+
+    .imagesSide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      @include sm {
+        img {
+          max-height: 200px;
+        }
+      }
+
+      @include xs {
+        flex-direction: column;
+
+        img {
+          max-height: 200px;
+        }
+      }
+
+      .floating {
+        img {
+          &:nth-of-type(1) {
+            position: absolute;
+            bottom: 5%;
+            left: -50px;
+            width: 150px;
+            height: 100px;
+            z-index: 1;
+          }
+          &:nth-of-type(2) {
+            position: absolute;
+            top: 25%;
+            left: 70px;
+            width: 140px;
+            height: 160px;
+            z-index: 1;
+
+            @include xs {
+              display: none;
+            }
+          }
+          &:nth-of-type(3) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+
+            @include lg {
+              right: 100px;
+            }
+
+            @include md {
+              right: 250px;
+            }
+
+            @include xs {
+              display: none;
+            }
+          }
+        }
+
+        &.ar {
+          img {
+            &:nth-of-type(2) {
+              position: absolute;
+              top: 25%;
+              right: 160px;
+              width: 140px;
+              height: 160px;
+              z-index: 1;
+
+              @include lg {
+                right: 100px;
+              }
+
+              @include md {
+                right: 250px;
+              }
+
+              @include xs {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .partOne {
+        img {
+          position: relative;
+          z-index: 2;
+          &:first-of-type {
+            transform: translateX(100px) translateY(50px);
+
+            @include sm {
+              transform: unset;
+            }
+          }
+        }
+      }
+
+      .partTwo {
+        transform: translateY(150px);
+
+        @include sm {
+          transform: unset;
+        }
+
+        img {
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

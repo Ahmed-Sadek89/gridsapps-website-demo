@@ -1,0 +1,39 @@
+.info {
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: clamp(22px, 4vw, 35px);
+  }
+
+  &>p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 42px;
+    flex-wrap: wrap;
+
+    p {
+      border: 1px solid var(--main-color);
+      border-radius: 100px;
+      padding: 11px 35px;
+      color: var(--main-color);
+      cursor: pointer;
+      min-width: 180px;
+
+      &:hover {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+    }
+  }
+}

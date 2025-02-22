@@ -1,0 +1,119 @@
+@import "../mixins.scss";
+
+[data-tooltip] {
+  position: relative;
+
+  ._tooltip_text {
+    visibility: hidden;
+    min-width: 100px;
+    text-align: center;
+    font-style: normal;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(var(--main-color-rgb), 0.3);
+    color: var(--main-background);
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px 15px;
+
+    /* Position the tooltip */
+    position: absolute;
+    left: 0;
+    top: -150%;
+    z-index: 1;
+
+    &.left {
+      left: unset;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 110%;
+    }
+
+    &.right {
+      right: unset;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 110%;
+    }
+
+    &.bottom {
+      bottom: unset;
+      top: 150%;
+    }
+
+    &.top {
+      top: unset;
+      bottom: 150%;
+    }
+
+    &.xxl {
+      display: none;
+
+      @include xxl {
+        display: block;
+      }
+    }
+
+    &.xl {
+      display: none;
+
+      @include xl {
+        display: block;
+      }
+    }
+
+    &.lg {
+      display: none;
+
+      @include lg {
+        display: block;
+      }
+    }
+
+    &.md {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+    }
+
+    &.sm {
+      display: none;
+
+      @include sm {
+        display: block;
+      }
+    }
+
+    &.xs {
+      display: none;
+
+      @include xs {
+        display: block;
+      }
+    }
+
+    &.not_xs {
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  &:hover ._tooltip_text {
+    visibility: visible;
+  }
+}
+
+[data-theme="dark"],
+html.dark {
+  [data-tooltip] {
+    ._tooltip_text {
+      background-color: rgba(var(--main-color-rgb), 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+  }
+}

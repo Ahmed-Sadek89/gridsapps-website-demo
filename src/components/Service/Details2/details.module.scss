@@ -1,0 +1,46 @@
+@import "@/styles/mixins";
+
+.details {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E6F1FC 100%);
+  padding: 100px 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    @include xs {
+      gap: 80px;
+    }
+
+    .textSide {
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      p {
+        line-height: 35px;
+
+        @include sm {
+          line-height: 30px;
+        }
+      }
+    }
+
+    .textSide,
+    .imageSide {
+      flex: 1;
+    }
+
+    .imageSide {
+      img {
+        max-width: 500px;
+        max-height: 500px;
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.serivces {
+  padding: 100px 0;
+  background-color: var(--background-alt-color);
+
+  @include xs {
+    padding: 70px 0;
+  }
+
+  .meta {
+    h2 {
+      margin-bottom: 10px;
+      text-transform: capitalize;
+
+      @include sm {
+        text-align: center;
+      }
+    }
+
+    p {
+      margin-bottom: 50px;
+
+      @include sm {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .services_swiper {
+    .slide {
+      height: auto;
+    }
+    .service {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 2px 4px 30px 3px rgba($color: #000000, $alpha: 0.07);
+      transition: all 0.2s ease-in-out;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        box-shadow: 2px 4px 25px rgba($color: #000000, $alpha: 0.1);
+      }
+
+      .image {
+        margin-bottom: 15px;
+
+        img {
+          width: 150px;
+          height: 130px;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        flex: 1;
+
+        h3 {
+          font-size: 22px;
+          margin-bottom: 10px;
+
+          @include xxl {
+            font-size: 18px;
+          }
+
+          @include xs {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 22px;
+          color: var(--pale-text-color);
+          margin-bottom: 20px;
+
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          line-clamp: 5;
+          -webkit-box-orient: vertical;
+
+          max-height: 130px;
+
+          @include xl {
+            max-height: 118px;
+          }
+
+          * {
+            font-size: 15px;
+            font-weight: normal;
+
+            @include xl {
+              font-size: 14px;
+            }
+          }
+
+          @include sm {
+            font-size: 14px;
+          }
+        }
+      }
+
+      button {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        background-color: transparent;
+        color: var(--main-color);
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        display: block;
+        margin-inline-start: auto;
+        transition: all 0.2s ease-in-out;
+
+        a {
+          color: inherit;
+        }
+
+        &:hover {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .swiper {
+      padding: 40px;
+
+      @include xs {
+        padding: 10px;
+      }
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 20px;
+      position: relative;
+      top: -80px;
+      gap: 10px;
+
+      @include md {
+        top: 0px;
+      }
+
+      .swiper_prev,
+      .swiper_next {
+        padding: 0;
+        border: 0;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        color: var(--main-color);
+        box-shadow: 2px 4px 10px rgba($color: #000000, $alpha: 0.05);
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: var(--main-color);
+          color: #fff;
+        }
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+
+          &:hover {
+            background-color: #fff;
+            color: #aaa;
+          }
+
+          svg {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+}

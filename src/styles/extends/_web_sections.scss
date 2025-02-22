@@ -1,0 +1,234 @@
+@import "@/styles/mixins";
+
+%web_settings_section_slider {
+  .section_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 20px;
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    button {
+      @extend %mainBtn;
+      margin-top: 0;
+      padding: 8px 30px;
+    }
+
+    &.in_modal {
+      position: sticky;
+      top: -25px;
+      background: var(--secondary-background);
+      z-index: 10;
+      padding: 20px;
+      margin-bottom: 0;
+      border-radius: 0 0 8px 8px;
+      border: 1px solid var(--border-color);
+      border-top: 0;
+      box-shadow: 0 4px 4px rgba(var(--main-background-rgb), 0.1);
+
+      .grid_control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+
+        button {
+          padding: 3px 10px;
+
+          svg {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+
+    .slide {
+      width: calc(50% - 25px);
+
+      @include sm {
+        width: 100%;
+      }
+
+      &.three {
+        width: calc(33.33% - 30px);
+
+        @include lg {
+          width: calc(50% - 25px);
+        }
+
+        @include sm {
+          width: 100%;
+        }
+      }
+
+      &.four {
+        width: calc(25% - 30px);
+
+        @include lg {
+          width: calc(50% - 25px);
+        }
+
+        @include sm {
+          width: 100%;
+        }
+      }
+
+      img {
+        height: 300px !important;
+      }
+    }
+  }
+
+  .swiper,
+  .items {
+    & > div {
+      overflow: visible;
+    }
+
+    .slide {
+      margin-inline-end: 10px;
+
+      img {
+        border-radius: 12px;
+        border: 2px solid var(--border-color);
+        opacity: 0.8;
+        cursor: pointer;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      .selector {
+        margin-top: 10px;
+
+        label {
+          cursor: pointer;
+          font-size: 18px;
+          margin-inline-start: 5px;
+        }
+
+        input {
+          margin-inline-start: 0;
+        }
+      }
+
+      &.active {
+        img {
+          opacity: 1;
+          border-color: var(--main-color);
+        }
+
+        .selector {
+          label {
+            color: var(--text-color-main);
+          }
+        }
+      }
+    }
+  }
+}
+
+%web_settings_previewer {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(var(--main-background-rgb), 0.1);
+
+  .section_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 20px;
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+
+    button {
+      @extend %mainBtn;
+      margin-top: 0;
+      padding: 8px 30px;
+
+      svg {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
+  .section_preview {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(var(--main-background-rgb), 0.1);
+    border: 1px solid rgba(var(--main-background-rgb), 0.1);
+
+    img {
+      border-radius: 12px;
+      border: 1px solid rgba(var(--main-background-rgb), 0.1);
+    }
+  }
+}
+
+%action_section {
+  display: flex;
+  justify-content: flex-end;
+
+  .save_button {
+    @extend %mainBtn;
+    padding: 10px 40px;
+    border-radius: 4px;
+    margin-top: 25px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+
+    &:disabled {
+      background-color: #777 !important;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      background-color: rgba(var(--main-background-rgb), 0.1);
+    }
+
+    svg {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+%modal_action_bar {
+  @extend %action_section;
+  justify-content: flex-start;
+  margin-top: 30px;
+  padding: 20px;
+  position: sticky;
+  bottom: -35px;
+  background: var(--secondary-background);
+  z-index: 10;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid var(--border-color);
+  border-bottom: 0;
+  box-shadow: 0 -2px 4px rgba(var(--main-background-rgb), 0.05);
+
+  button {
+    margin-top: 0 !important;
+  }
+}

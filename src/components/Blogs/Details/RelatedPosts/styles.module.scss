@@ -1,0 +1,32 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.blog_details_relatedposts {
+  background-color: var(--background-alt-color);
+  padding: 80px 0;
+
+  .meta {
+    h4 {
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  .posts_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include lg {
+      gap: 30px;
+    }
+  }
+}

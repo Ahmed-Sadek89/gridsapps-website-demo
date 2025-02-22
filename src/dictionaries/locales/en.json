@@ -1,0 +1,434 @@
+{
+  "pagesTitles": {
+    "websiteName": "GridsApps",
+    "home": "Home",
+    "blog": "Blog",
+    "team": "Team",
+    "contact": "Contact Us",
+    "testimonials": "Testimonials",
+    "faq": "Frequently asked questions",
+    "terms": "Terms and Conditions",
+    "packages": "Packages",
+    "refund": "Refund Policy",
+    "privacy": "Privacy Policy",
+    "services": "Services",
+    "serviceDetails": "Service Details",
+    "servicesCategories": "Services Categories",
+    "portfolio": "Portfolio",
+    "dashboard": "Dashboard",
+    "about": "About Us",
+    "notFound": "Page Not Found"
+  },
+  "locales": {
+    "english": "English",
+    "arabic": "Arabic",
+    "languages": "Language"
+  },
+  "welcome": "welcome to our website",
+  "notFound": {
+    "text": "It looks like you are lost.",
+    "btn": "Go back to home",
+    "metadata": {
+      "title": "Page not found"
+    }
+  },
+  "layout": {
+    "navbar": {
+      "links": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "team": "Team",
+        "packages": "Packages",
+        "blogs": "Blogs",
+        "contact": "Contact Us"
+      }
+    },
+    "footer": {
+      "call_action": {
+        "title": "Work Together with grids apps",
+        "text": "Our company is a very professional company, with friendly service, modern homes and interest-free payments",
+        "button": "Send Message"
+      },
+      "info": {
+        "lorem": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
+      },
+      "links": {
+        "about_us": "About Us",
+        "faq": "FAQ",
+        "services": "Services",
+        "contact": "Contact Us",
+        "refund": "Refund Policy",
+        "terms": "Terms and Conditions",
+        "privacy": "Privacy Policy"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address"
+      },
+      "copyright": {
+        "part1": "Copyright © ",
+        "part2": "All Rights Reserved By GridsApps"
+      }
+    }
+  },
+  "home": {
+    "header": {
+      "top_section": {
+        "sub_title": "Your business with us",
+        "title": "WE ARE A PROFESSIONAL COMPANY THAT PROVIDES THE BEST SOLUTIONS IN MOBILE APPS.",
+        "description": "With us we make dreams come true in building your products, together say “yes” to creating extraordinary software solutions",
+        "clients": "Client Trusted"
+      },
+      "middle_section": [
+        "UI/UX Design",
+        "Website Development",
+        "Mobile App Development",
+        "Quality Assurance & Testing",
+        "Digital Marketing and SEO"
+      ],
+      "bottom_section": {
+        "button": "Start a Project",
+        "partners": "Trusted Partner"
+      }
+    }
+  },
+  "common": {
+    "services": {
+      "title": "Our Services we provide to you",
+      "sub_title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "service": {
+        "lorem": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys.",
+        "readMore": "Read more"
+      }
+    },
+    "discover": {
+      "title": "Discover Amazing Software Solutions",
+      "sub_title": "We Provides a different kinds of software solutions as web or Mobile Apps.",
+      "button": "Contact Us",
+      "solutions": [
+        "Mobile Applications",
+        "Web Applications",
+        "Cloud Applications",
+        "Desktop Applications"
+      ]
+    },
+    "process": {
+      "title": "Grids Apps Process",
+      "sub_title": "The Step-by-Step Process of Our Software Solution Company",
+      "lorem": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "items": [
+        "Requirements Gathering",
+        "Design",
+        "Implementation",
+        "Testing",
+        "Deployment",
+        "Maintenance"
+      ]
+    },
+    "successfull_projects": {
+      "title": "Success Project",
+      "sub_title": "Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar direlig.Lörem ipsum astrobel sar direlig. Kronde est",
+      "lorem": "Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar",
+      "project_title": "Website Design",
+      "project_button": "Let's work",
+      "button": "View Our Project"
+    },
+    "projects": {
+      "title": "Check Out The Awesome Websites we created",
+      "sub_title": "Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar direlig.Lörem ipsum astrobel sar direlig. Kronde est"
+    },
+    "activities": {
+      "title": "Main Activities For Our Company",
+      "sub_title": "As A Software Solution Company, Our Main Activities Includes:",
+      "lorem": "Lorem ipsum dolor sit amet, ea mundi malorum cum, ocurreret reprehendunt.",
+      "items": [
+        "Software development",
+        "Customization and integration",
+        "Maintenance and support",
+        "Project management",
+        "Quality assurance and testing",
+        "Consulting and training",
+        "Research and development",
+        "Seles and marketing"
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "sub_title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "lorem": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s of the printing and typesetting industry",
+      "position": "Sr. Director, Brand Marketing"
+    },
+    "video": {
+      "title": "Why grids apps Is The Best Choice?",
+      "sub_title": "Watch this one minute video so you understand why you should use our services!",
+      "pwa": "PWA",
+      "websites": "Websites",
+      "android": "Android Apps",
+      "ios": "iOS Apps",
+      "desktop": "Desktop Apps"
+    },
+    "projects_in_brief": {
+      "title": "Our Projects In Brief",
+      "sub_title": "With Different Kinds like: Shop app, Recipe app, News/Blog app, Restaurant app, Fitness app, Events app, Lawyer "
+    },
+    "team": {
+      "title": "Expert Team Members",
+      "sub_title": "Our team of creative programmers,marketing experts, and members .we are to be doing what we love.",
+      "positions": {
+        "front": "Front-End Web Developer",
+        "back": "Back-End Web Developer",
+        "full": "Full-Stack Web Developer",
+        "mobile": "Mobile Apps Developer"
+      }
+    },
+    "blogs": {
+      "title": "Latest Blogs",
+      "sub_title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "blog": {
+        "title": "Lorem Ipsum is simply dummy text of the printing and industry.",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      }
+    },
+    "keep_in_touch": {
+      "title": "Stay with Us & Keep in touch",
+      "sub_title": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "cities": [
+        "New York",
+        "Dubai",
+        "Jordan",
+        "Palestine",
+        "Egypt-Cairo",
+        "Saudi Arabia"
+      ]
+    }
+  },
+  "blog": {
+    "header": {
+      "title": "Our Most Popular Blogs",
+      "description": "Whether you are looking for a demo, have a support blogs or a commercial query get in touch."
+    },
+    "content": {
+      "searchInput": "Search",
+      "filters": [
+        "Front End Development",
+        "Back End Development",
+        "Full Stack Development",
+        "Mobile Development",
+        "Cloud Development"
+      ],
+      "main_post": {
+        "title": "Lorem Ipsum is simply dummy text of the printing.",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since.",
+        "author": "grids apps",
+        "read_more": "Read More"
+      }
+    }
+  },
+  "blog_details": {
+    "related": {
+      "title": "What to read next",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
+  },
+  "services": {
+    "header": {
+      "title": "Our Services",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    }
+  },
+  "serviceDetails": {
+    "header": {
+      "title": "Service Details",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    },
+    "details": {
+      "title": "Title"
+    },
+    "contact": {
+      "title": "Submit",
+      "sub_title": "Quote Request",
+      "text": "Call us for fast support to this number.",
+      "form": {
+        "name": "Your Name*",
+        "email": "Email*",
+        "phone": "Phone*",
+        "company": "Company",
+        "quote": "Quote Type",
+        "services": "Services",
+        "notes": "Notes",
+        "submit": "Submit",
+        "invalidEmail": "Please enter a valid email address"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    },
+    "features": {
+      "title": "Features"
+    }
+  },
+  "servicesCategories": {
+    "header": {
+      "title": "Services Categories",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    }
+  },
+  "portfolio": {
+    "header": {
+      "title": "Our latest Projects",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    },
+    "content": {
+      "searchInput": "Search",
+      "filters": [
+        "Website",
+        "Mobile",
+        "Desktop",
+        "Social Media"
+      ],
+      "project": {
+        "project_title": "Website Design",
+        "sub_title": "ECommerce",
+        "lorem": "Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar"
+      }
+    }
+  },
+  "team": {
+    "header": {
+      "title": "Team Members",
+      "description": "Our team of creative programmers,marketing experts, and members .we are to be doing what we love."
+    }
+  },
+  "about": {
+    "header": {
+      "title": "About Us",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    },
+    "aboutGallery": {
+      "sub_title": "About Us",
+      "title": "Lorem Ipsum is simply dummy text of the printing.",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+    },
+    "statistics": {
+      "totalEmployees": "Total Employees",
+      "projectsNumber": "Projects Number",
+      "happyClients": "Happy Clients"
+    },
+    "details": {
+      "sub_title": "A Few Words About Us"
+    },
+    "process": {
+      "title": "How We Became Successful",
+      "sub_title": "We always challenge the openness of higher possibilities without defining the limits of our teams and products."
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Contact Grids Apps",
+      "description": "Whether you are looking for a demo, have a support question or a commercial query get in touch."
+    },
+    "info": {
+      "title": "Let’s Collaborate",
+      "description": "Lorem Ipsum is simply dummy text of the printing .",
+      "follow": "Follow us"
+    },
+    "form": {
+      "title": "Say hello",
+      "description": "Lorem Ipsum is simply dummy text of the printing.",
+      "fullName": "Full Name",
+      "companyName": "Company Name",
+      "email": "Email Address",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "message_placeholder": "Please type your message",
+      "button": "Send Message",
+      "messageSent": "Your message has been delivered successfully"
+    }
+  },
+  "testimonials": {
+    "header": {
+      "title": "Our Clients Testimonials",
+      "description": "Whether you are looking for a demo, have a support question or a commercial query get in touch."
+    },
+    "testimonials": {
+      "title": "Trusted by Thousands of Happy Customer",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy .",
+      "lorem": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s of the printing and typesetting industry"
+    }
+  },
+  "faq": {
+    "header": {
+      "title": "Questions & Answers",
+      "description": "Whether you are looking for a demo, have a support question or a commercial query get in touch."
+    },
+    "questions": {
+      "title": "Getting Started",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy .",
+      "question1": "Who is Grids Apps for?",
+      "question2": "How can Grids Apps deliver my work?",
+      "answer": "A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy."
+    }
+  },
+  "terms": {
+    "header": {
+      "title": "Terms & Conditions",
+      "description": "Whether you are looking for a demo, have a support question or a commercial query get in touch."
+    },
+    "content": {
+      "buttons": "Lorem Ipsum"
+    }
+  },
+  "refund": {
+    "header": {
+      "title": "Refund Policy",
+      "description": "Explore our comprehensive refund policy to understand your options for returns and refunds."
+    }
+  },
+  "privacy": {
+    "header": {
+      "title": "Our Privacy Policy",
+      "description": "Whether you are looking for a demo, have a support question or a commercial query get in touch."
+    },
+    "content": {
+      "buttons": "Lorem Ipsum"
+    }
+  },
+  "packages": {
+    "header": {
+      "title": "Our Packages",
+      "description": "Convenient payment options for a seamless package purchase experience."
+    },
+    "content": {
+      "title": "Select Packages",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy .",
+      "days": "days",
+      "month": "Month",
+      "off": "off regular price"
+    },
+    "form": {
+      "title": "please fill out this fields",
+      "description": "Lorem Ipsum is simply dummy text of the printing .",
+      "name": "Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "country": "Country",
+      "agree": {
+        "part1": "I agree on the",
+        "part2": "terms and conditions",
+        "part3": "and",
+        "part4": "privacy policy"
+      },
+      "button": "Confirm payment",
+      "recaptcha_error": "Please pass ReCaptcha challenge first",
+      "package_not_selected": "Please select a package",
+      "empty_error": "Please fill out all fields",
+      "lahza_error": "Lahza payment gateway didn't loaded correctly",
+      "payment_completed": "Payment complete! Reference: "
+    }
+  }
+}

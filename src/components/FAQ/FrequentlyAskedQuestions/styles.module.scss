@@ -1,0 +1,87 @@
+@import "@/styles/mixins";
+@import "@/styles/extends";
+
+.faq {
+  padding: 70px 50px 100px;
+  background-color: rgba(var(--main-color-rgb), 0.08);
+  border-radius: 12px;
+
+  @include xs {
+    padding: 50px 30px 80px;
+  }
+
+  .meta {
+    h2 {
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0 auto 10px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 55%;
+      margin: 0 auto 50px;
+
+      @include lg {
+        max-width: 65%;
+      }
+
+      @include md {
+        max-width: 75%;
+      }
+
+      @include sm {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .questions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 35px;
+    max-width: 80%;
+    margin: auto;
+
+    @include lg {
+      max-width: 85%;
+    }
+
+    @include md {
+      max-width: 95%;
+      gap: 20px;
+    }
+
+    .question {
+      padding: 25px;
+      border-radius: 15px;
+      background-color: #fff;
+      width: calc(50% - 17.5px);
+
+      @include md {
+        width: calc(100%);
+      }
+
+      h4 {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      p {
+        padding: 0;
+        transition: all 0.1s linear;
+        max-height: 0;
+        overflow: hidden;
+
+        &.expanded {
+          max-height: 1000px;
+          overflow: visible;
+          padding: 15px 0 0;
+        }
+      }
+    }
+  }
+}

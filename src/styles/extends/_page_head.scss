@@ -1,0 +1,57 @@
+@import "@/styles/mixins";
+
+%page_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include xs {
+    flex-wrap: wrap;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 22px;
+    font-weight: bold;
+
+    @include xxs {
+      width: 100%;
+    }
+  }
+
+  button {
+    padding: 10px 20px 8px;
+    background-color: var(--main-background);
+    border: 0;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+
+    @include xs {
+      padding: 7px 15px 5px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: rgba(var(--main-color-rgb), 0.9);
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      color: inherit;
+
+      svg {
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}
